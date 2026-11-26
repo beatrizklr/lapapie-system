@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Lapapie</RootNamespace>
+    <AssemblyName>Lapapie</AssemblyName>
+    <ApplicationIcon>Recursos\lapapie.ico</ApplicationIcon>
+    <Product>Lapapiê — Sistema Gerenciador de Papelaria</Product>
+    <Version>1.0.0</Version>
+    <!--
+      DPI: com "DpiUnawareGdiScaled" o Windows amplia a janela em telas com escala
+      de 125%/150% mantendo os textos nítidos. Assim os cartões e gráficos desenhados
+      à mão mantêm as proporções em qualquer notebook.
+    -->
+    <ApplicationHighDpiMode>DpiUnawareGdiScaled</ApplicationHighDpiMode>
+    <ApplicationVisualStyles>true</ApplicationVisualStyles>
+    <!-- Permite compilar o projeto também fora do Windows (ex.: integração contínua) -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="QuestPDF" Version="2024.12.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Arquivo de configuração (string de conexão) e imagens são copiados para a pasta do .exe -->
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Recursos\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
