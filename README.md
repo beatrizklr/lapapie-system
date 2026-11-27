@@ -85,11 +85,9 @@ O banco `lapapie` possui **15 tabelas**, **3 views** e **5 relacionamentos muito
 
 ![Modelo físico](docs/modelagem-fisica.png)
 
-### Documentação completa
+### Documentação da modelagem
 
-- [MER — entidades, relacionamentos e cardinalidades](docs/MER.md)
-- [Modelagem física — tabelas, tipos, chaves e restrições](docs/modelagem-fisica.md)
-- [Decisões de projeto — justificativas da modelagem e da aplicação](docs/decisoes-de-projeto.md)
+As entidades, os relacionamentos, as cardinalidades e as justificativas de cada decisão de modelagem estão descritos em [detalhes_modelagem.md](docs/detalhes_modelagem.md).
 
 ---
 
@@ -110,7 +108,7 @@ O banco `lapapie` possui **15 tabelas**, **3 views** e **5 relacionamentos muito
 ### 2. Clone o repositório
 
 ```bash
-git clone https://github.com/<usuario>/lapapie-system.git
+git clone https://github.com/beatrizklr/lapapie-system.git
 cd lapapie-system
 ```
 
